@@ -1,3 +1,3 @@
 # DAT505-GitHub
 
-send
+These lessons are created by Leslie Zheng(Zheng Pinyi); 
