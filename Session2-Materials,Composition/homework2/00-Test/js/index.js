@@ -5,7 +5,7 @@ var geometry1, material1, mesh1;
 var geometry2, material2, mesh2;
 var geometry3, material3, mesh3;
 var geometry4, material4, mesh4;
-//var geometry5, material5, mesh5;
+var geometry5, material5, mesh5;
 
 function init(){
   // Create an empty scene --------------------------
