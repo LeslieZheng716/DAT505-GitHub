@@ -50,8 +50,8 @@ function geometry(){
   // Create a Cube Mesh with basic material ---------
   geometry1 = new THREE.OctahedronGeometry(50,0);
   texture = new THREE.TextureLoader().load("Texture/texture1.jpg");
-  material4= new THREE.MeshBasicMaterial({map:texture});
-  mesh1 = new THREE.Mesh( geometry1, material4 );
+  material2= new THREE.MeshBasicMaterial({map:texture});
+  mesh1 = new THREE.Mesh( geometry1, material2 );
   mesh1.position.z = -1000;
   mesh1.position.x = 400;
   mesh1.position.y = 200;
@@ -61,7 +61,7 @@ function geometry(){
 
 
   // Create a Cube Mesh with basic material ---------
-  geometry2 = new THREE.IcosahedronGeometry( 50,1 );
+  geometry2 = new THREE.CircleBufferGeometry( 120,50,20);
   /*material2 = new THREE.MeshLambertMaterial({
     color: '#D2BE82',
     lightMap: null,
@@ -99,7 +99,7 @@ function geometry(){
   scene.add( mesh3 );
 
   // Create a Cube Mesh with basic material ---------
-  geometry4 = new THREE.CircleGeometry(100,100);
+  geometry4 = new THREE.CircleGeometry(80,80,10);
   material4 = new THREE.MeshBasicMaterial( {wireframe : true,shininess:1} );
   //texture = new THREE.TextureLoader().load("Texture/moon_1024.jpg");
 //  material4= new THREE.MeshBasicMaterial({map:texture});
@@ -150,7 +150,7 @@ var render = function () {
   mesh2.rotation.z =rot;
 
   mesh3.rotation.x = rot; //Continuously rotate the mesh
-  mesh3.rotation.y =rot;
+  mesh3.rotation.y =0;
   mesh3.rotation.z = 0;
 
   mesh4.rotation.x = 0; //Continuously rotate the mesh
