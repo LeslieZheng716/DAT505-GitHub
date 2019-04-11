@@ -48,7 +48,6 @@ function init(){
   // Create a Cube Mesh with material ---------
   geometry = new THREE.SphereGeometry(0.5,8,8);
   geometry3= new THREE.SphereGeometry(100,100);
-  material3 = new THREE.MeshBasicMaterial( {wireframe : true} );
   geometry1 = new THREE.BoxGeometry(0.5, 0.5, 0.5);
   geometry2 = new THREE.TorusGeometry(4,0.5,10,10);
   color = Math.random() * 0xffffff;
@@ -60,7 +59,7 @@ function init(){
   });
 
  material1 = new THREE.MeshNormalMaterial();
-
+ material3 = new THREE.MeshBasicMaterial( {wireframe : true} );
 
   mesh = new THREE.Mesh(geometry, material3);
   mesh.position.set(0, 0, 0);
@@ -603,7 +602,7 @@ function init(){
   f4.add(controller, 'rotationY', -180, 180).onChange( function() {
       mesh10.rotation.y = de2ra(controller.rotationY);
   });
-    f4.add(controller, 'rotationZ', -180, 180).onChange( function() {
+  f4.add(controller, 'rotationZ', -180, 180).onChange( function() {
           mesh10.rotation.z = de2ra(controller.rotationZ);
   });
 }

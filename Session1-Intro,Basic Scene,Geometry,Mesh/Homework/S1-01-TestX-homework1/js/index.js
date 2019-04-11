@@ -25,16 +25,11 @@ function init(){
   renderer.setClearColor("#EE7600");
   //Create a WebGLRenderer and turn on shadows in the renderer
 
-
-
   // Configure renderer size
   renderer.setSize( window.innerWidth, window.innerHeight );
 
   // Append Renderer to DOM
   document.body.appendChild( renderer.domElement );
-
-
-
 
 }
 
