@@ -1,3 +1,4 @@
 # DAT505-GitHub
 
-These lessons are created by Leslie Zheng(Zheng PinYi); 
+NAME: PinYi Zheng(Leslie Zheng);
+This is a directory that includes code projects for DAT505 module;
