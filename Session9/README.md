@@ -11,8 +11,9 @@ Session9 includes two documents :Examples & Test;
 <script src="build/OBJLoader.js"></script>
 <script src="build/MTLLoader.js"></script>
 ```
+
 Find intersections.Creates a ray projector object and returns the object selected by the ray
-```html
+```javascript
 raycaster.setFromCamera( mouse, camera );
 var intersects = raycaster.intersectObjects( objects, true );
 

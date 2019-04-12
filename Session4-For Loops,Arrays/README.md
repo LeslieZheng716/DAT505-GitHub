@@ -12,18 +12,18 @@ Session4 includes two documents :Examples & Homework;
 <script src="js/OrbitControls.js"></script>
 ```
 Definite cubes,rot,randomSpeedX
-```html
+```javascript
 var renderer, scene, camera;
 var cubes = [];
 var rot = 0;
 var randomSpeedX = [];
 ```
 the code of OrbitControls
-```html
+```javascript
 controls = new THREE.OrbitControls(camera, renderer.domElement);
 ```
-the code of ArrayMesh.Start from -35 and sequentially add one every 5 pixels
-```html
+The code of ArrayMesh.Start from -35 and sequentially add one every 5 pixels
+```javascript
 for (var x = -35; x < 40; x += 5) {
   for (var y = -35; y < 40; y += 5) {
     var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
@@ -45,8 +45,8 @@ The color of the material is assigned a random color and the randomSpeed of cube
   }
 }
 ```
- for Each takes all the array entries and passes the c as the object, and i is keeping track of the index for each cube,and rotate the object that is referenced in c
-```html
+ For Each takes all the array entries and passes the c as the object, and i is keeping track of the index for each cube,and rotate the object that is referenced in c
+```javascript
 
   function drawFrame(){
    requestAnimationFrame(drawFrame);

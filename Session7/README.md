@@ -18,7 +18,7 @@ Session7 includes two documents :Examples & Homework;
 MatCap-style image rendered on a sphere;
 Modify sphere UVs instead of using a ShaderMaterial;
 Definite mouseX, mouseY,container,stats
-```html
+```javascript
 var camera, scene, renderer;
 var image;
 var mouseX = 0, mouseY = 0;
@@ -29,7 +29,7 @@ var  windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 ```
 Define the faces of eyes'texture.
-```html
+```javascript
 var faceVertexUvs = geometry.faceVertexUvs[ 0 ];
 for (  i = 0; i < faceVertexUvs.length; i ++ ) {
   var uvs = faceVertexUvs[ i ];
@@ -40,7 +40,7 @@ for (var  j = 0; j < 3; j ++ ) {
   }
 ```
 Set array of eyes,positions and map positions to let all meshs have independent positions.Set size of window and convert the screen coordinates of the mouse point into a Threejs 3d coordinate.Calculate the coordinates of the mouse's position in threejs, and then sets the object's position to the mouse's position
-```html
+```javascript
 mesh = new THREE.Mesh( geometry, material );
 mesh.position.x = (Math.random() *-200 )+40;
 mesh.position.y = (Math.random() *-100 )+50;

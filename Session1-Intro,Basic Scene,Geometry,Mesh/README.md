@@ -9,7 +9,7 @@ This project is to practice setting cubes'array and control cube independently i
 ```
 This code creates a scene, a camera, and a geometric cube, and it adds the cube to the scene. It then creates a `WebGL` renderer for the scene and camera, and it adds that viewport to the document.body element.
 
-```html
+```javascript
 var camera, scene, renderer;
 var geometry, material, mesh;
 

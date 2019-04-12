@@ -20,7 +20,7 @@ Define mouse,radius,theta,objects,
 create an AudioListener and add it to the camera,
 create a global audio source,
 load a sound and set it as the Audio object's buffer
-```html
+```javascript
 var container, stats;
 var camera, scene, raycaster, renderer;
 
@@ -33,11 +33,11 @@ var sound = new THREE.Audio( listener );
 var audioLoader = new THREE.AudioLoader();
 ```
 Settings audio
-```html
+```javascript
   camera.add( listener );
 ```
 Model/material loading!Load the file of OBJLoader and mtlLoader,you can import the 3dmax object model and change the obj and mtl inside it.Add to the array so that we can access for raycasting.
-```html
+```javascript
 for (var i=0; i<200; i++){
 
    var mtlLoader = new THREE.MTLLoader();
@@ -68,7 +68,7 @@ stats = new Stats();
 container.appendChild( stats.dom );
 
 Set size of window and convert the screen coordinates of the mouse point into a Threejs 3d coordinate.Calculate the coordinates of the mouse's position in threejs, and then sets the object's position to the mouse's position.
-```html
+```javascript
 raycaster = new THREE.Raycaster();
 
 renderer = new THREE.WebGLRenderer();

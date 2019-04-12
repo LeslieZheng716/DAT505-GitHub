@@ -13,14 +13,14 @@ Learning to add GUI in the scene to control geometries.
 About how to edit the code in the index.js.
 
 
-```html
+```javascript
 var scene, camera, renderer;
 var threejs, color,material;
 var geometry,mesh;
 var group;
 ```
 add some of parts in a group and put them into the scene,using GUI to control various geometries at the same time;
-```html
+```javascript
 var group = new THREE.Group()
            group.add(mesh1)
            group.add(mesh2)
@@ -32,8 +32,8 @@ var group = new THREE.Group()
            group.add(mesh8)
            scene.add(group)
 ```
-Setup the GUI controller
-```html
+Setup the GUI controller,from mesh1 to mesh7
+```javascript
 var controller = new function() {
   this.scaleX = 1;
   this.scaleY = 1;
@@ -52,34 +52,19 @@ var gui = new dat.GUI();
 var f1 = gui.addFolder('Scale');
 f1.add(controller, 'scaleX', 0.1, 5).onChange( function() {
   mesh1.scale.x = (controller.scaleX);
-  mesh2.scale.x = (controller.scaleX);
-  mesh3.scale.x = (controller.scaleX);
-  mesh4.scale.x = (controller.scaleX);
-  mesh5.scale.x = (controller.scaleX);
-  mesh6.scale.x = (controller.scaleX);
-  mesh7.scale.x = (controller.scaleX);
+  ......
 });
 f1.add(controller, 'scaleY', 0.1, 5).onChange( function() {
   mesh1.scale.y = (controller.scaleY);
-  mesh2.scale.y = (controller.scaleY);
-  mesh3.scale.y = (controller.scaleY);
-  mesh4.scale.y = (controller.scaleY);
-  mesh5.scale.y = (controller.scaleY);
-  mesh6.scale.y = (controller.scaleY);
-  mesh7.scale.y = (controller.scaleY);
+  ......
 });
 f1.add(controller, 'scaleZ', 0.1, 5).onChange( function() {
   mesh1.scale.z = (controller.scaleZ);
-  mesh2.scale.z = (controller.scaleZ);
-  mesh3.scale.z = (controller.scaleZ);
-  mesh4.scale.z = (controller.scaleZ);
-  mesh5.scale.z = (controller.scaleZ);
-  mesh6.scale.z = (controller.scaleZ);
-  mesh7.scale.z = (controller.scaleZ);
+  ......
 });
 ```
-control geometry1-7
-```html
+control mesh1-7
+```javascript
 var f2 = gui.addFolder('Position');
 f2.add(controller, 'positionX', -50, 50).onChange( function() {
   mesh1.position.x = (controller.positionX);
@@ -94,8 +79,8 @@ f2.add(controller, 'positionZ', -50, 50).onChange( function() {
 .....
 });
 ```
-control geometry1-8
-```html
+control mesh1-8
+```javascript
 var f3 = gui.addFolder('Rotation');
 f3.add(controller, 'rotationX', -180, 180).onChange( function() {
   mesh1.rotation.x = de2ra(controller.rotationX);
@@ -110,8 +95,8 @@ f3.add(controller, 'rotationZ', -180, 180).onChange( function() {
 ......
 });
 ```
-control the boxOpacity of geometry1-8 and control the boxColor of geometries which added MeshBasicMaterial.
-```html
+control the boxOpacity of mesh1-8 and control the boxColor of meshes which added MeshBasicMaterial.
+```javascript
 gui.addColor( controller, 'boxColor', color ).onChange( function() {
   mesh.material.color.setHex( dec2hex(controller.boxColor) );
 });
@@ -120,7 +105,7 @@ gui.add( controller, 'boxOpacity', 0.1, 1 ).onChange( function() {
 });
 ```
 Setup a new GUI controller to estimate the position and rotation of all geometries easily.
-```html
+```javascript
 var gui = new dat.GUI();
 var f4 = gui.addFolder('Position');
 f4.add(controller,'positionX',-50,50).onChange(function(){

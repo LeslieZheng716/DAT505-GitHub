@@ -14,14 +14,11 @@ Further study according to the first lesson,we create the material for the geome
 <script src="build/three.min.js"></script>
 <script src="js/dat.gui.min.js"></script>
 ```
-Create a Cube Mesh with basic material
-```html
+Create a Cube Mesh with basic material,creating different materials to chooose
+```javascript
 function geometry(){
-  // Create a Cube Mesh with basic material ---------
   geometry = new THREE.BoxGeometry(50, 50, 50);
-  ---------creating different materials,
   /*material = new THREE.MeshPhongMaterial({shininess: 1});*/
-
   texture = new THREE.TextureLoader().load("Texture/colors.png");
   material1= new THREE.MeshBasicMaterial({map:texture});
   mesh = new THREE.Mesh( geometry, material1 );
