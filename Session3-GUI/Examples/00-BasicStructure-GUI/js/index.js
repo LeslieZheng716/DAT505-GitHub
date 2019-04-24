@@ -133,7 +133,7 @@ var render = function () {
   console.log(rotationVariable);
   mesh.rotation.z = rotationVariable;
   mesh1.rotation.z = rotationVariable;
-  
+
   console.log(rotationVariable);
 
 //  mesh.rotation.x += 0.01; //Continuously rotate the mesh
