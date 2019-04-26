@@ -9,17 +9,24 @@ This is a final project that includes code projects for DAT505 module;
 https://github.com/LeslieZheng716/DAT505-GitHub.git
 ### Final project :
 ####  《Dream Queen》
-* This assignment aims to simulate the atmosphere of a 1985 charity concert by queen.
+* This assignment aims to simulate the atmosphere of a 1985 charity concert by queen.I downloaded seven live versions of their concert that day to show.
 
 ### Description ###
  I tried to create a set of keyboards, then added music to each key, added the song title text to them, and then added a button plug-in in the upper right corner to turn on and off music. Added a circular star shape map to the scene, then added a queen illustration, and added a color and transparency panel to the illustration to adjust the color and transparency of the image.
 
-### Pictures
-![Assignment show](/Final Project/Dream Queen/pictures/1.png)
-![Assignment show](/Final Project/Dream Queen/pictures/2.png)
-![Assignment show](/Final Project/Dream Queen/pictures/3.png)
-![Assignment show](/Final Project/Dream Queen/pictures/5.png)
+### Preview
+![Assignment show](/Final Project/Dream Queen/Preview/1.png)
+![Assignment show](/Final Project/Dream Queen/Preview/2.png)
+![Assignment show](/Final Project/Dream Queen/Preview/3.png)
+![Assignment show](/Final Project/Dream Queen/Preview/5.png)
 
+### texture
+The textures of background i used in the scene,which are about Queen. I collected them on the internet. I will show you some of them.
+![Assignment texture](/Final Project/Dream Queen/texture/texture1.jpg)
+![Assignment texture](/Final Project/Dream Queen/texture/texture2.jpg)
+
+### music
+I downloaded them which are about live music on the 1985 charity concert by Queen on the internet.
 ### Usage ###
 Add button plug-in and add background picture, you can adjust the size and so on, add text plug-in, you can adjust the font size and color and so on
 ```html
@@ -47,6 +54,7 @@ Add button plug-in and add background picture, you can adjust the size and so on
   text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
 }
 ```
+The body section below are plug-ins I used.
 ```html
 <a class="btn-music"></a>
 <div id="container"></div>
@@ -66,6 +74,27 @@ Add button plug-in and add background picture, you can adjust the size and so on
 <script src="js/OrbitControls.js"></script>
 <script src="js/index.js"></script>
 ```
+#### images
+dot.svg and dot1.svg: Map of stars in the scene. Code to build two-dimensional graphics. I can modify the data such as the r of circle.
+```html
+<svg fill="#FFFFFF" height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg">
+    <path d="M24 24H0V0h24v24z" fill="none"/>
+    <circle cx="12" cy="12" r="8"/>
+</svg>
+——————————
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="first floor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<path fill="none" d="M33,33.167H0V0h33V33.167z"/>
+<polygon fill="#FFFFFF" points="15.583,0.501 19.133,10.887 30.578,10.899 21.326,17.331 24.851,27.725 15.583,21.314 6.317,27.725
+	9.841,17.331 0.59,10.899 12.034,10.887 "/>
+</svg>
+```
+Two ICONS are added to the music switch button on the web page.  
+![Assignment icon](/Final Project/Dream Queen/images/music.png)
+![Assignment icon](/Final Project/Dream Queen/images/stop.png)
 ### Code
 To clear the page variables
 ```javascript
